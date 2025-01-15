@@ -286,21 +286,21 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
     background-color: #333;
     overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    height: 0;
+    transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
     padding: 0;
     position: absolute;
     top: 70px; /* Dostosowane do wysokości nagłówka */
     width: 100%;
     left: 0;
+    justify-content: center;
 }
 
 .nav-links.active {
-    max-height: 300px; /* Dostosuj tę wartość do zawartości */
-    padding: 15px 0;
+    height: 100vh; /* Pełna wysokość ekranu */
+    padding: 50px 0;
 }
 
 .nav-links li {
@@ -355,6 +355,8 @@ nav {
         background-color: #333;
         flex-direction: column;
         text-align: center;
+        justify-content: center; /* Wyśrodkowanie nawigacji */
+        align-items: center;
     }
 
     .burger {
