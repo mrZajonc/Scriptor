@@ -82,5 +82,18 @@
     <script>
         AOS.init({ duration: 1000 });
     </script>
+   <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+
+        // Animacja burgera
+        burger.classList.toggle('toggle');
+    });
+});
+</sceipt>
 </body>
 </html>
