@@ -69,11 +69,9 @@ form button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.projects-list pre {
-    background-color: #f4f4f4;
-    padding: 10px;
-    overflow-x: auto;
-    border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9em;
+.projects-list img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }

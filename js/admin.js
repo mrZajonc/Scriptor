@@ -1,26 +1,23 @@
-const portfolioGallery = document.getElementById('portfolioGallery');
+const projectList = document.getElementById('projectList');
 
-// Funkcja renderująca projekty w portfolio
-function renderPortfolio() {
-    portfolioGallery.innerHTML = '';
-    projects.forEach((project, index) => {
-        const div = document.createElement('div');
-        div.classList.add('portfolio-item');
-        div.setAttribute('data-aos', 'fade-up');
-        div.setAttribute('data-aos-delay', `${100 * (index + 1)}`);
-        div.innerHTML = `
-            <img src="${project.codeUrl}" alt="${project.title}">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-        `;
-        portfolioGallery.appendChild(div);
-    });
+// Funkcja renderująca projekty (statycznie dla podglądu)
+function renderProjects() {
+    fetch('/projects')
+        .then((res) => res.json())
+        .then((projects) => {
+            projectList.innerHTML = '';
+            projects.forEach((project) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <img src="${project.imageUrl}" alt="${project.title}">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                `;
+                projectList.appendChild(li);
+            });
+        })
+        .catch((err) => console.error('Error fetching projects:', err));
 }
 
-// Upewnij się, że portfolio jest aktualizowane razem z listą projektów
-projectForm.addEventListener('submit', function () {
-    renderPortfolio();
-});
-
-// Początkowe renderowanie portfolio
-renderPortfolio();
+// Renderowanie przy ładowaniu strony
+renderProjects();
