@@ -275,29 +275,38 @@ header {
 nav {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    overflow: hidden; /* Ukrywa elementy przy zwijaniu */
-    max-height: 0; /* Ustawia maksymalną wysokość na 0 */
-    transition: max-height 0.5s ease-in-out; /* Płynna animacja */
+    background-color: #333;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    padding: 0;
 }
 
 .nav-links.active {
-    max-height: 300px; /* Ustaw wysokość odpowiednią do ilości elementów */
+    max-height: 300px; /* Dostosuj tę wartość, aby pokrywała pełną wysokość zawartości */
+    padding: 15px 0;
 }
 
 .nav-links li {
-    position: relative;
+    width: 100%;
+    text-align: center;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    display: block;
+    padding: 10px;
 }
 
 /* Style dla rozwijanej nawigacji */
@@ -333,17 +342,13 @@ nav {
 @media screen and (max-width: 768px) {
     .nav-links {
         display: flex;
-        flex-direction: column;
-        width: 100%;
         position: absolute;
         top: 70px;
         left: 0;
+        width: 100%;
         background-color: #333;
+        flex-direction: column;
         text-align: center;
-    }
-
-    .nav-links li {
-        padding: 15px 0;
     }
 
     .burger {
