@@ -55,8 +55,6 @@
                 <p>Oferuję pełne wsparcie techniczne i regularne aktualizacje Twojej strony.</p>
             </div>
         </div>
-    </section>
-
   <section id="portfolio" class="section">
     <h2 data-aos="fade-up">Portfolio</h2>
     <div class="portfolio-gallery" id="portfolio-gallery">
@@ -65,33 +63,29 @@
 </section>
 
 <script>
-    // Lista projektów
-    const projects = [
-        { name: 'Projekt 1', aosDelay: 100 },
-        { name: 'Projekt 2', aosDelay: 200 },
-        { name: 'Projekt 3', aosDelay: 300 }
-    ];
+    // Funkcja do pobierania projektów z serwera
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('/projects')
+            .then(response => response.json())
+            .then(projects => {
+                const gallery = document.getElementById('portfolio-gallery');
+                projects.forEach(project => {
+                    const projectDiv = document.createElement('div');
+                    projectDiv.className = 'portfolio-item';
+                    projectDiv.setAttribute('data-aos', 'fade-up');
+                    projectDiv.setAttribute('data-aos-delay', project.aosDelay);
+                    projectDiv.textContent = project.name;
+                    gallery.appendChild(projectDiv);
+                });
 
-    // Funkcja do dodawania projektów do galerii
-    function displayProjects() {
-        const gallery = document.getElementById('portfolio-gallery');
-        projects.forEach((project, index) => {
-            const projectDiv = document.createElement('div');
-            projectDiv.className = 'portfolio-item';
-            projectDiv.setAttribute('data-aos', 'fade-up');
-            projectDiv.setAttribute('data-aos-delay', project.aosDelay);
-            projectDiv.textContent = project.name;
-            gallery.appendChild(projectDiv);
-        });
-
-        // Inicjalizacja AOS po dodaniu elementów
-        AOS.init();
-    }
-
-    // Wywołanie funkcji po załadowaniu strony
-    document.addEventListener('DOMContentLoaded', displayProjects);
+                // Inicjalizacja AOS po dodaniu elementów
+                AOS.init();
+            })
+            .catch(error => {
+                console.error('Error fetching projects:', error);
+            });
+    });
 </script>
-
     <section id="contact" class="section" data-aos="fade-up">
         <h2>Kontakt</h2>
         <form action="#" method="post">
