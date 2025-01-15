@@ -1,9 +1,9 @@
-navToggle.addEventListener('click', () => {
-    navUl.classList.toggle('show');
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navUl.classList.remove('show');
-    });
+  burger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      burger.classList.toggle('toggle');
   });
+});
