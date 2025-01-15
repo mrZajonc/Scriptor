@@ -84,17 +84,15 @@
         AOS.init({ duration: 1000 });
     </script>
    <script>
-   document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
+   navToggle.addEventListener('click', () => {
+    navUl.classList.toggle('show');
+  });
 
-    burger.addEventListener('click', () => {
-        nav.classList.toggle('active');
-
-        // Animacja burgera
-        burger.classList.toggle('toggle');
-      
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navUl.classList.remove('show');
     });
+  });
 });
 </script>
 </body>
