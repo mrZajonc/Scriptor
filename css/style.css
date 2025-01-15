@@ -257,6 +257,7 @@ footer {
         padding: 30px 20px;
     }
 }
+/* Style dla nagłówka i nawigacji */
 header {
     display: flex;
     justify-content: space-between;
@@ -280,6 +281,13 @@ nav {
     list-style: none;
     display: flex;
     gap: 20px;
+    overflow: hidden; /* Ukrywa elementy przy zwijaniu */
+    max-height: 0; /* Ustawia maksymalną wysokość na 0 */
+    transition: max-height 0.5s ease-in-out; /* Płynna animacja */
+}
+
+.nav-links.active {
+    max-height: 300px; /* Ustaw wysokość odpowiednią do ilości elementów */
 }
 
 .nav-links li {
@@ -291,6 +299,7 @@ nav {
     text-decoration: none;
     font-size: 18px;
 }
+
 /* Style dla rozwijanej nawigacji */
 .burger {
     display: none;
@@ -304,12 +313,26 @@ nav {
     height: 3px;
     background-color: white;
     border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Animacje dla burger menu */
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+    opacity: 0;
+}
+
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Responsywność */
 @media screen and (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         position: absolute;
@@ -323,12 +346,7 @@ nav {
         padding: 15px 0;
     }
 
-    .nav-links.active {
-        display: flex;
-    }
-
     .burger {
         display: flex;
     }
 }
-
