@@ -6,53 +6,62 @@
     <meta name="description" content="Scriptor - Twój kreator stron internetowych. Oferuję profesjonalne i nowoczesne rozwiązania dla Twojej firmy.">
     <title>Scriptor - Kreator Stron</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
     <header>
-        <div class="logo">Scriptor</div>
+        <div class="logo" data-aos="fade-right">Scriptor</div>
         <nav>
             <ul>
-                <li><a href="#about">O mnie</a></li>
-                <li><a href="#services">Usługi</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#about" data-aos="fade-down">O mnie</a></li>
+                <li><a href="#services" data-aos="fade-down" data-aos-delay="100">Usługi</a></li>
+                <li><a href="#portfolio" data-aos="fade-down" data-aos-delay="200">Portfolio</a></li>
+                <li><a href="#contact" data-aos="fade-down" data-aos-delay="300">Kontakt</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" data-aos="zoom-in">
         <h1>Witaj na stronie Scriptor</h1>
         <p>Tworzę nowoczesne strony internetowe, które wyróżniają się jakością i funkcjonalnością.</p>
         <a href="#contact" class="cta-button">Skontaktuj się ze mną</a>
     </section>
 
-    <section id="about">
-        <h2>O mnie</h2>
-        <p>Jestem Scriptor, kreator stron internetowych z pasją do tworzenia estetycznych i wydajnych projektów. Pomogę Ci wyróżnić się w sieci!</p>
+    <section id="about" class="section">
+        <h2 data-aos="fade-up">O mnie</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Jestem Scriptor, kreator stron internetowych z pasją do tworzenia estetycznych i wydajnych projektów. Pomogę Ci wyróżnić się w sieci!</p>
     </section>
 
-    <section id="services">
+    <section id="services" class="section" data-aos="fade-up">
         <h2>Usługi</h2>
-        <ul>
-            <li>Projektowanie stron internetowych</li>
-            <li>Optymalizacja SEO</li>
-            <li>Responsywne projekty</li>
-            <li>Wsparcie techniczne</li>
-        </ul>
-    </section>
-
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="portfolio-gallery">
-            <div class="portfolio-item">Projekt 1</div>
-            <div class="portfolio-item">Projekt 2</div>
-            <div class="portfolio-item">Projekt 3</div>
+        <div class="services-grid">
+            <div class="service-item" data-aos="flip-left">
+                <h3>Projektowanie stron</h3>
+                <p>Tworzę piękne, responsywne strony, które idealnie pasują do Twojej wizji.</p>
+            </div>
+            <div class="service-item" data-aos="flip-left" data-aos-delay="100">
+                <h3>Optymalizacja SEO</h3>
+                <p>Twoja strona będzie widoczna w wyszukiwarkach, przyciągając nowych klientów.</p>
+            </div>
+            <div class="service-item" data-aos="flip-left" data-aos-delay="200">
+                <h3>Wsparcie i konserwacja</h3>
+                <p>Oferuję pełne wsparcie techniczne i regularne aktualizacje Twojej strony.</p>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="portfolio" class="section">
+        <h2 data-aos="fade-up">Portfolio</h2>
+        <div class="portfolio-gallery">
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">Projekt 1</div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">Projekt 2</div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">Projekt 3</div>
+        </div>
+    </section>
+
+    <section id="contact" class="section" data-aos="fade-up">
         <h2>Kontakt</h2>
-        <p>Masz pytania? Chcesz zamówić stronę? Skontaktuj się ze mną:</p>
         <form action="#" method="post">
             <input type="text" name="name" placeholder="Twoje imię" required>
             <input type="email" name="email" placeholder="Twój e-mail" required>
@@ -64,28 +73,9 @@
     <footer>
         <p>&copy; 2025 Scriptor. Wszystkie prawa zastrzeżone.</p>
     </footer>
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyBagAemZ8yK2mj2_8h_qRdyDybbN01vIeA",
-    authDomain: "scriptor-web.firebaseapp.com",
-    projectId: "scriptor-web",
-    storageBucket: "scriptor-web.firebasestorage.app",
-    messagingSenderId: "126271649652",
-    appId: "1:126271649652:web:0d7028644e6ff2a96c9e21",
-    measurementId: "G-FH30JN26Q2"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+    <script>
+        AOS.init({ duration: 1000 });
+    </script>
 </body>
 </html>
