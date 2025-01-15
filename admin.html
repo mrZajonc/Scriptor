@@ -14,15 +14,15 @@
     <main>
         <section class="add-project">
             <h2>Dodaj Nowy Projekt</h2>
-            <form id="projectForm">
+            <form id="projectForm" action="/upload" method="POST" enctype="multipart/form-data">
                 <label for="title">Tytuł Projektu:</label>
                 <input type="text" id="title" name="title" placeholder="Wprowadź tytuł projektu" required>
 
                 <label for="description">Opis:</label>
                 <textarea id="description" name="description" placeholder="Wprowadź opis projektu" required></textarea>
 
-                <label for="imageUrl">URL Zrzutu Ekranu:</label>
-                <input type="url" id="imageUrl" name="imageUrl" placeholder="Wklej link do obrazu (np. zrzutu ekranu)" required>
+                <label for="imageFile">Wybierz Zrzut Ekranu:</label>
+                <input type="file" id="imageFile" name="imageFile" accept="image/*" required>
 
                 <button type="submit">Dodaj Projekt</button>
             </form>
