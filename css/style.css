@@ -12,6 +12,7 @@ body {
     overflow-x: hidden; /* Zapobieganie przewijaniu poziomemu */
 }
 
+/* Podstawowe style nagłówka */
 header {
     display: flex;
     justify-content: space-between;
@@ -30,6 +31,7 @@ header .logo {
     font-weight: bold;
 }
 
+/* Style dla nawigacji */
 header nav ul {
     list-style: none;
     display: flex;
@@ -45,6 +47,56 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: #00bcd4;
+}
+
+/* Ukrycie menu i pokazanie burgera na mniejszych ekranach */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Media queries dla responsywności */
+@media (max-width: 768px) {
+    /* Ukrycie listy menu i pokazanie burgera */
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #111;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+/* Dodatkowe style dla animacji burgera */
+.burger.toggle .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.toggle .line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.toggle .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .hero {
@@ -366,100 +418,3 @@ nav {
 
 
 
-/* Stylizacja nagłówka */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #333;
-    color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* Stylizacja nawigacji */
-nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    text-align: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #00bcd4;
-}
-
-/* Stylizacja burger menu */
-.burger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.burger .line {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    border-radius: 3px;
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-/* Stylizacja responsywna */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-        padding: 20px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .burger {
-        display: flex;
-    }
-
-    .burger.toggle .line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .burger.toggle .line:nth-child(2) {
-        opacity: 0;
-    }
-
-    .burger.toggle .line:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-}
