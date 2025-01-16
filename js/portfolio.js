@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         projectDiv.classList.add("portfolio-item");
 
         projectDiv.innerHTML = `
-            <img src="grafika_projekt/${project.id}.jpg" alt="${project.title}">
+            <img src="../projekt_grafik/${project.id}.jpg" alt="${project.title}">
             <h3>${project.title}</h3>
             <p>${project.description}</p>
             <button>Więcej</button>
