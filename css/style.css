@@ -9,10 +9,10 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    overflow-x: hidden; /* Zapobieganie przewijaniu poziomemu */
+    overflow-x: hidden; 
 }
 
-/* Podstawowe style nagłówka */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -67,28 +67,7 @@ header nav ul li a:hover {
     background-color: white;
 }
 
-/* Media queries dla responsywności */
-@media (max-width: 768px) {
-    /* Ukrycie listy menu i pokazanie burgera */
-    header nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #111;
-        width: 100%;
-        padding: 10px 0;
-    }
 
-    header nav ul.active {
-        display: flex;
-    }
-
-    .burger {
-        display: flex;
-    }
-}
 
 /* Dodatkowe style dla animacji burgera */
 .burger.toggle .line:nth-child(1) {
@@ -313,106 +292,23 @@ footer {
         padding: 30px 20px;
     }
 }
-/* Style dla nagłówka i nawigacji */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background: #333;
-    color: white;
-    position: fixed; /* Utrzymuje nagłówek na górze strony */
-    width: 100%;
-    top: 0;
-    z-index: 1000; /* Zapewnia, że nagłówek jest nad innymi elementami */
-}
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #333;
-    overflow: hidden;
-    height: 0;
-    transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
-    padding: 0;
-    position: absolute;
-    top: 70px; /* Dostosowane do wysokości nagłówka */
-    width: 100%;
-    left: 0;
-    justify-content: center;
-}
-
-.nav-links.active {
-    height: 100vh; /* Pełna wysokość ekranu */
-    padding: 50px 0;
-}
-
-.nav-links li {
-    width: 100%;
-    text-align: center;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    padding: 10px;
-}
-
-/* Style dla rozwijanej nawigacji */
-.burger {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-/* Animacje dla burger menu */
-.burger.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.burger.toggle .line2 {
-    opacity: 0;
-}
-
-.burger.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-/* Responsywność */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        position: fixed; /* Pozycjonowanie stałe */
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: #333;
+/* Media queries dla responsywności */
+@media (max-width: 768px) {
+    /* Ukrycie listy menu i pokazanie burgera */
+    header nav ul {
+        display: none;
         flex-direction: column;
-        text-align: center;
-        justify-content: center; /* Wyśrodkowanie nawigacji */
-        align-items: center;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #111;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    header nav ul.active {
+        display: flex;
     }
 
     .burger {
@@ -420,5 +316,4 @@ nav {
     }
 }
 
-
-
+/* Koniec */
