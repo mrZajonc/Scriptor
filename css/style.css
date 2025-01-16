@@ -379,3 +379,13 @@ footer {
 .portfolio-item button:hover {
     background-color: #00796b;
 }
+.portfolio-gallery .portfolio-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.portfolio-gallery .portfolio-item.animated {
+    opacity: 1;
+    transform: translateY(0);
+}

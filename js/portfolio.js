@@ -10,12 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     // Generowanie kafelków
-    projects.forEach((project) => {
+    projects.forEach((project, index) => {
         const projectDiv = document.createElement("div");
         projectDiv.classList.add("portfolio-item");
 
+        // Dodanie animacji AOS
+        projectDiv.setAttribute("data-aos", "fade-up");
+        projectDiv.setAttribute("data-aos-delay", `${index * 100}`);
+
         projectDiv.innerHTML = `
-            <img src="../projekt_grafik/${project.id}.jpg" alt="${project.title}">
+            <img src="grafika_projekt/${project.id}.jpg" alt="${project.title}">
             <h3>${project.title}</h3>
             <p>${project.description}</p>
             <button>Więcej</button>
