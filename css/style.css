@@ -321,3 +321,61 @@ footer {
 }
 
 /* Koniec */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.portfolio-item h3 {
+    margin: 15px 0 5px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.portfolio-item p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 10px 15px;
+}
+
+.portfolio-item button {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.portfolio-item button:hover {
+    background-color: #00796b;
+}
