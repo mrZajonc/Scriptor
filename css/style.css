@@ -18,7 +18,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-    background-color: #111;
+    background-color: #181818;
     color: white;
     position: sticky;
     top: 0;
@@ -196,6 +196,10 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+
+/** Media  **/
+
 
 @media (max-width: 1024px) {
     .hero h1 {
