@@ -1,21 +1,15 @@
 {
-    "version": "1.0.5",
+    "version": "1.0.8",
     "projects": [
       {
         "title": "Scriptor Portfolio",
-        "description": "Strona internetowa prezentująca portfolio kreatora stron.",
-        "imageUrl": "/projekt_grafik/portfolio-screenshot.png"
+        "description": "Strona internetowa prezentująca portfolio kreatora stron."
       },
       {
-        "title": "Blog Web App",
-        "description": "Aplikacja blogowa z dynamicznym dodawaniem postów.",
-        "imageUrl": "/projekt_grafik/blog-screenshot.png"
-      },
-      {
-        "title": "E-commerce Platform",
-        "description": "Platforma handlowa online z funkcjonalnością koszyka i płatności.",
-        "imageUrl": "/projekt_grafik/ecommerce-screenshot.png"
+        "title": "Scriptor Portfolio",
+        "description": "Aplikacja blogowa z dynamicznym dodawaniem postów."
       }
+      
     ]
   }
   
