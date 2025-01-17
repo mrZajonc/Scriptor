@@ -73,16 +73,34 @@
             <script src="js/portfolio.js"></script>
             
         </section>
+        <!-- Okno modalne -->
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img id="modal-image" src="" alt="Project Image">
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+    </div>
+</div>
+
         
-    <section id="contact" class="section" data-aos="fade-up">
-        <h2>Kontakt</h2>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Twoje imię" required>
-            <input type="email" name="email" placeholder="Twój e-mail" required>
-            <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
-            <button type="submit">Wyślij</button>
-        </form>
-    </section>
+<section id="contact" class="section" data-aos="fade-up">
+    <h2>Kontakt</h2>
+    <form id="contact-form">
+        <input type="text" name="name" placeholder="Twoje imię" required>
+        <input type="email" name="email" placeholder="Twój e-mail" required>
+        <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+        <button type="submit">Wyślij</button>
+    </form>
+</section>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script src="js/email.js"></script>
+    
+</script>
+
 
     <footer>
         <p>&copy; 2025 Scriptor. Wszystkie prawa zastrzeżone.</p>
