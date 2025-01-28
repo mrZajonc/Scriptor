@@ -24,7 +24,7 @@
     <div id="logo"></div>
     <header>
         <div class="logo"><a href="#logo">Scriptor</a></div>
-        <!----> <nav>
+        <nav>
             <ul class="nav-links">
                 <li><a href="#about">O mnie</a></li>
                 <li><a href="#services">Usługi</a></li>
@@ -39,7 +39,6 @@
         </nav> 
     </header>
     
-
     <section class="hero" data-aos="zoom-in">
         <h1>Witaj na stronie Scriptor</h1>
         <p>Tworzę nowoczesne strony internetowe, które wyróżniają się jakością i funkcjonalnością.</p>
@@ -72,35 +71,34 @@
             </div>
         </div>
         </section>
+
         <section id="portfolio" class="section">
             <h2 data-aos="fade-up">Portfolio</h2>
             
                 <div class="portfolio-gallery">
                     <!-- Kafelki projektów zostaną wygenerowane tutaj przez JS -->
                 </div>
-            
-            
         </section>
-        <!-- Okno modalne -->
-<div id="modal" class="modal hidden">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <img id="modal-image" src="" alt="Project Image">
-        <h3 id="modal-title"></h3>
-        <p id="modal-description"></p>
-    </div>
-</div>
 
-        
-<section id="contact" class="section" data-aos="fade-up">
-    <h2>Kontakt</h2>
-    <form id="contact-form">
-        <input type="text" name="name" placeholder="Twoje imię" required>
-        <input type="email" name="email" placeholder="Twój e-mail" required>
-        <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
-        <button type="submit">Wyślij</button>
-    </form>
-</section>
+        <!-- Okno modalne -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <img id="modal-image" src="" alt="Project Image">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+
+        <section id="contact" class="section" data-aos="fade-up">
+            <h2>Kontakt</h2>
+            <form id="contact-form" action="https://formspree.io/f/manqoqpk" method="POST">
+                <input type="text" name="name" placeholder="Twoje imię" required>
+                <input type="email" name="email" placeholder="Twój e-mail" required>
+                <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+                <button type="submit">Wyślij</button>
+            </form>
+        </section>
 
 
     
