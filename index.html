@@ -92,7 +92,7 @@
 
         <section id="contact" class="section" data-aos="fade-up">
             <h2>Kontakt</h2>
-            <form id="contact-form" action="https://formspree.io/f/manqoqpk" method="POST">
+            <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSe2B6PZG8TC_cvhptG7ywiqyPVdll4dGkajF1e-DrxbFg8dXw/viewform?usp=header" method="POST">
                 <input type="text" name="name" placeholder="Twoje imię" required>
                 <input type="email" name="email" placeholder="Twój e-mail" required>
                 <textarea name="message" placeholder="Twoja wiadomość" required></textarea>
@@ -100,7 +100,38 @@
             </form>
         </section>
 
+<!--       <section id="contact" class="section" data-aos="fade-up">
+    		<h2>Kontakt</h2>
+    		<form id="contact-form">
+        		<input type="text" name="name" placeholder="Twoje imię" required>
+        		<input type="email" name="email" placeholder="Twój e-mail" required>
+        		<textarea name="message" placeholder="Twoja wiadomość" required></textarea>
+        		<button type="submit">Wyślij</button>
+    		</form>
+	</section>
 
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(event){
+    event.preventDefault();
+
+    var formData = new FormData(this);
+    var webhookUrl = "TWÓJ_WEBHOOK_URL"; // Wklej tutaj URL Google Apps Script
+
+    fetch(webhookUrl, {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert("Twoja wiadomość została wysłana!");
+        document.getElementById("contact-form").reset();
+    })
+    .catch(error => {
+        console.error("Błąd:", error);
+        alert("Wystąpił problem. Spróbuj ponownie.");
+    });
+});
+</script> -->
     
 
 
